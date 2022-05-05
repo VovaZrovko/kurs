@@ -161,7 +161,7 @@ export default class Mainpage extends LightningElement {
         temp.forEach(element => {
             data.push(element.value);
         });
-        let result = await getProcess({fromCore:parseInt(data[0]), toCore:parseInt(data[1]), fromThread:parseInt(data[2]), toThread:parseInt(data[3]), Soket:data[4], fromSpeed:parseInt(data[5]), toSpeed:parseInt(data[6]), fromGen:parseInt(data[7]), toGen:parseInt(data[8]), brend:this.procValue});
+        let result = await getProcess({fromCore:parseInt(data[0]), toCore:parseInt(data[1]), fromThread:parseInt(data[2]), toThread:parseInt(data[3]), fromSpeed:parseInt(data[4]), toSpeed:parseInt(data[5]), fromGen:parseInt(data[6]), toGen:parseInt(data[7]), brend:this.procValue});
         return result;
 
     }
@@ -180,7 +180,7 @@ export default class Mainpage extends LightningElement {
         temp.forEach(element => {
             data.push(element.value);
         });
-        let result = await getPower({fromPower: parseInt(data[0]), toPower: parseInt(data[1]), fromNoise: parseInt(data[2]), toNoise: parseInt(data[3]), fromMaxCon: parseInt(data[4]),  toMaxCon: parseInt(data[5]), Syst: this.powerValue, Formfactor: data[6]})
+        let result = await getPower({fromPower: parseInt(data[0]), toPower: parseInt(data[1]), fromNoise: parseInt(data[2]), toNoise: parseInt(data[3]), fromMaxCon: parseInt(data[4]),  toMaxCon: parseInt(data[5]), Syst: this.powerValue})
         return result;
     }
     async hhdHandling(){
@@ -198,7 +198,7 @@ export default class Mainpage extends LightningElement {
         temp.forEach(element => {
             data.push(element.value);
         });
-        let result = await getSSD({Type: this.ssdValue, fromCap: parseInt(data[0]), toCap: parseInt(data[1]), Formfactor: data[2], Inter: data[3]})
+        let result = await getSSD({Type: this.ssdValue, fromCap: parseInt(data[0]), toCap: parseInt(data[1]), Inter: data[2]})
         return result;
     }
     async ramHandling(){
@@ -207,7 +207,7 @@ export default class Mainpage extends LightningElement {
         temp.forEach(element => {
             data.push(element.value);
         });
-        let result = await getRAM({fromCap: parseInt(data[0]), toCap: parseInt(data[1]), fromSlot: parseInt(data[2]), toSlot: parseInt(data[3]), fromFreq: parseInt(data[4]), toFreq: parseInt(data[5]), Type: data[6]});
+        let result = await getRAM({fromCap: parseInt(data[0]), toCap: parseInt(data[1]), fromFreq: parseInt(data[2]), toFreq: parseInt(data[3]), Type: data[4]});
         return result;
     }
     async videoHandling(){
@@ -216,7 +216,7 @@ export default class Mainpage extends LightningElement {
         temp.forEach(element => {
             data.push(element.value);
         });
-        let result = await getVideo({Brend: this.videoValue, Con: data[0], Inter: data[1], Type: data[2], fromCap: parseInt(data[3]), toCap: parseInt(data[4]), fromBit: parseInt(data[5]), toBit: parseInt(data[6])})
+        let result = await getVideo({Brend: this.videoValue, Type: data[0], fromCap: parseInt(data[1]), toCap: parseInt(data[2]), fromBit: parseInt(data[3]), toBit: parseInt(data[4])})
         return result;
     }
     async soundHandling(){
@@ -225,7 +225,7 @@ export default class Mainpage extends LightningElement {
         temp.forEach(element => {
             data.push(element.value);
         });
-        let result = await getSound({Type: this.soundTypeValue, Con: this.soundValue, fromChan: parseInt(data[0]), toChan: parseInt(data[1]), Color: data[2]})
+        let result = await getSound({Type: this.soundTypeValue, Con: this.soundValue, fromChan: parseInt(data[0]), toChan: parseInt(data[1])})
         return result;
     }
     async corpusHandling(){
@@ -261,6 +261,7 @@ export default class Mainpage extends LightningElement {
                                             let obj = this.assignObject(pr,pw,mr,hd,sd,rm,vd,snd,crp);
                                             let price = this.sumUp(pr,pw,mr,hd,sd,rm,vd,snd,crp);
                                             if(priceArray[0] < price && priceArray[1] > price){
+                                                obj.sum = 'Price: ' + price + '$';
                                                 data.push(obj);
                                             }
                                         }

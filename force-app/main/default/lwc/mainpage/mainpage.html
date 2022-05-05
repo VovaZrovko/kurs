@@ -9,8 +9,6 @@
                 <div class="dname">К-сть потоків:</div>
                 <div class="ltnin">від <lightning-input value="10" data-active='1' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
                 <div class="ltnin">до <lightning-input value="20" data-active='1' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="dname">Сокет:</div>
-                <div class="ltntext"> <lightning-input value="Socket AM4" data-active='1' type="text" style="width: 322px;"></lightning-input></div>
                 <div class="dname">Тактова частота:</div>
                 <div class="ltnin">від <lightning-input value="3500" data-active='1' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
                 <div class="ltnin">до <lightning-input value="4000" data-active='1' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
@@ -20,7 +18,7 @@
                 <div class="dname">Бренд:</div>
                 <div class="ltncom"><lightning-combobox style="width:322px" name="proc" value={procValue} options={procOptions} onchange={handleChange}></lightning-combobox></div>
             </fieldset>
-            <fieldset style="height: 265.18px;">
+            <fieldset style="height: 226.18px;">
                 <legend>Материнська плата</legend>
                 <div class="dname">Сокет:</div>
                 <div class="ltntext"> <lightning-input value="Socket 1151" data-active='2' type="text" style="width: 322px;" ></lightning-input></div>
@@ -32,8 +30,70 @@
                 <div class="dname">Формфактор:</div>
                 <div class="ltntext"> <lightning-input value="MicroATX" data-active='2' type="text" style="width: 322px;"  ></lightning-input></div>
             </fieldset>
+            <fieldset style="height: 425.68px;">
+                <legend>Відео та звук</legend>
+                <div class="dname">Бренд відео:</div>
+                <div class="ltncom"><lightning-combobox style="width:322px" name="video" value={videoValue} options={videoOptions} onchange={handleChange}></lightning-combobox></div>
+                <div class="dname">Тип памяті відео:</div>
+                <div class="ltntext"> <lightning-input value="PCI Expres" data-active='7' type="text" style="width: 322px;"  ></lightning-input></div>
+                <div class="dname">Обєм памяті відео:</div>
+                <div class="ltnin">від <lightning-input value="3" data-active='7' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="ltnin">до <lightning-input value="7" data-active='7' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="dname">Глибина шини пам'яті відео:</div>
+                <div class="ltnin">від <lightning-input value="190" data-active='7' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="ltnin">до <lightning-input value="200" data-active='7' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>    
+
+                <div class="dname">Тип звуку:</div>
+                <div class="ltncom"><lightning-combobox  style="width:322px" name="soundtype" value={soundTypeValue} options={soundTypeOptions} onchange={handleChange}></lightning-combobox></div>
+                <div class="dname">Інтерфейс зєднання звуку:</div>
+                <div class="ltncom"><lightning-combobox  style="width:322px" name="soundint"  value={soundValue} options={soundOptions} onchange={handleChange}></lightning-combobox></div>
+                <div class="dname">Канали звуку:</div>
+                <div class="ltnin">від <lightning-input value="2" data-active='8' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="ltnin">до <lightning-input value="4" data-active='8' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+            </fieldset>
+            <fieldset style="height: 425.68px;">
+                <legend>Память</legend>
+                <div class="dname">Тип hhd:</div>
+                <div class="ltncom"><lightning-combobox  style="width:322px" name="hhd" value={hhdValue} options={hhdOptions} onchange={handleChange}></lightning-combobox></div>
+                <div class="dname">Ємність hhd:</div>
+                <div class="ltnin">від <lightning-input value="3" data-active='4' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="ltnin">до <lightning-input value="5" data-active='4' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="dname">Швидкість шпинделя hhd:</div>
+                <div class="ltnin">від <lightning-input value="5000" data-active='4' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="ltnin">до <lightning-input value="5500" data-active='4' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="dname">Обєм буфера hhd:</div>
+                <div class="ltnin">від <lightning-input value="6" data-active='4' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="ltnin">до <lightning-input value="9" data-active='4' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                
+                <div class="dname">Тип ssd:</div>
+                <div class="ltncom"><lightning-combobox  style="width:322px" name="ssd" value={ssdValue} options={ssdOptions} onchange={handleChange}></lightning-combobox></div>
+                <div class="dname">Ємність ssd:</div>
+                <div class="ltnin">від <lightning-input value="450" data-active='5' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="ltnin">до <lightning-input value="550" data-active='5' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="dname">Інтерфейс підключення ssd:</div>
+                <div class="ltntext"> <lightning-input value="PCI Express 3.0 x4" data-active='5'  type="text" style="width: 322px;"  ></lightning-input></div>
+            
+                <div class="dname">Обєм памяті ram:</div>
+                <div class="ltnin">від <lightning-input value="30" data-active='6' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="ltnin">до <lightning-input value="35" data-active='6' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="dname">Частота памяті ram:</div>
+                <div class="ltnin">від <lightning-input value="4500" data-active='6' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="ltnin">до <lightning-input value="5000" data-active='6' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="dname">Тип памяті ram:</div>
+                <div class="ltntext"> <lightning-input value="DDR5 SDRAM" data-active='6' type="text" style="width: 322px;"  ></lightning-input></div>
+            </fieldset>
             <fieldset>
-                <legend>Блок живлення</legend>
+                <legend>Зовнішній вигляд</legend>
+                <div class="dname">Тип:</div>
+                <div class="ltntext"> <lightning-input value="Miditower" data-active='9' type="text" style="width: 322px;" ></lightning-input></div>
+                <div class="dname">К-сть вентиляторів:</div>
+                <div class="ltnin">від <lightning-input value="1" data-active='9' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
+                <div class="ltnin">до <lightning-input value="3" data-active='9' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>    
+                <div class="dname">Матеріал:</div>
+                <div class="ltntext"> <lightning-input value="Plastic" data-active='9' type="text" style="width: 322px;" ></lightning-input></div>
+            </fieldset>
+            <fieldset>
+                <legend>Живлення</legend>
                 <div class="dname">Потужність:</div>
                 <div class="ltnin">від <lightning-input value="700" data-active='3' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
                 <div class="ltnin">до <lightning-input value="800" data-active='3' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
@@ -45,94 +105,13 @@
                 <div class="ltnin">до <lightning-input value="7" data-active='3' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
                 <div class="dname">Система охолодження:</div>
                 <div class="ltncom"><lightning-combobox style="width:322px" name="power" value={powerValue} options={powerOptions} onchange={handleChange}></lightning-combobox></div>
-                <div class="dname">Формфактор:</div>
-                <div class="ltntext"> <lightning-input value="ATX(PS/2)" data-active='3' type="text" style="width: 322px;" ></lightning-input></div>
-            </fieldset>
-            <fieldset style="height: 226.68px;">
-                <legend>HHD диск</legend>
-                <div class="dname">Тип:</div>
-                <div class="ltncom"><lightning-combobox  style="width:322px" name="hhd" value={hhdValue} options={hhdOptions} onchange={handleChange}></lightning-combobox></div>
-                <div class="dname">Ємність:</div>
-                <div class="ltnin">від <lightning-input value="3" data-active='4' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="ltnin">до <lightning-input value="5" data-active='4' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="dname">Швидкість обертання шпинделя:</div>
-                <div class="ltnin">від <lightning-input value="5000" data-active='4' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="ltnin">до <lightning-input value="5500" data-active='4' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="dname">Обєм буфера:</div>
-                <div class="ltnin">від <lightning-input value="6" data-active='4' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="ltnin">до <lightning-input value="9" data-active='4' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-            </fieldset>
-            <fieldset>
-                <legend>SSD диск</legend>
-                <div class="dname">Тип:</div>
-                <div class="ltncom"><lightning-combobox  style="width:322px" name="ssd" value={ssdValue} options={ssdOptions} onchange={handleChange}></lightning-combobox></div>
-                <div class="dname">Ємність:</div>
-                <div class="ltnin">від <lightning-input value="450" data-active='5' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="ltnin">до <lightning-input value="550" data-active='5' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="dname">Формфактор:</div>
-                <div class="ltntext"> <lightning-input value="M.2" data-active='5' type="text" style="width: 322px;" ></lightning-input></div>
-                <div class="dname">Інтерфейс підключення:</div>
-                <div class="ltntext"> <lightning-input value="PCI Express 3.0 x4" data-active='5'  type="text" style="width: 322px;"  ></lightning-input></div>
-            </fieldset>
-            <fieldset>
-                <legend>Оперативна память</legend>
-                <div class="dname">Обєм памяті:</div>
-                <div class="ltnin">від <lightning-input value="30" data-active='6' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="ltnin">до <lightning-input value="35" data-active='6' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="dname">К-сть слотів:</div>
-                <div class="ltnin">від <lightning-input value="0" data-active='6' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="ltnin">до <lightning-input value="2" data-active='6' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="dname">Частота памяті:</div>
-                <div class="ltnin">від <lightning-input value="4500" data-active='6' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="ltnin">до <lightning-input value="5000" data-active='6' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="dname">Тип памяті:</div>
-                <div class="ltntext"> <lightning-input value="DDR5 SDRAM" data-active='6' type="text" style="width: 322px;"  ></lightning-input></div>
-            </fieldset>
-            <fieldset>
-                <legend>Відео карта</legend>
-                <div class="dname">Бренд:</div>
-                <div class="ltncom"><lightning-combobox style="width:322px" name="video" value={videoValue} options={videoOptions} onchange={handleChange}></lightning-combobox></div>
-                <div class="dname">З'єднувач:</div>
-                <div class="ltntext"> <lightning-input value="HDMI" data-active='7' type="text" style="width: 322px;"  ></lightning-input></div>
-                <div class="dname">Інтерфейс:</div>
-                <div class="ltntext"> <lightning-input value="PCI Express 3.0" data-active='7' type="text" style="width: 322px;"  ></lightning-input></div>
-                <div class="dname">Тип памяті:</div>
-                <div class="ltntext"> <lightning-input value="PCI Expre" data-active='7' type="text" style="width: 322px;"  ></lightning-input></div>
-                <div class="dname">Обєм памяті:</div>
-                <div class="ltnin">від <lightning-input value="3" data-active='7' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="ltnin">до <lightning-input value="7" data-active='7' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="dname">Бітова глибина шини пам'яті:</div>
-                <div class="ltnin">від <lightning-input value="190" data-active='7' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="ltnin">до <lightning-input value="200" data-active='7' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>    
-
-            </fieldset>
-            <fieldset style="height: 268.18px;">
-                <legend>Звукова карта</legend>
-                <div class="dname">Тип:</div>
-                <div class="ltncom"><lightning-combobox  style="width:322px" name="soundtype" value={soundTypeValue} options={soundTypeOptions} onchange={handleChange}></lightning-combobox></div>
-                <div class="dname">Інтерфейс зєднання:</div>
-                <div class="ltncom"><lightning-combobox  style="width:322px" name="soundint"  value={soundValue} options={soundOptions} onchange={handleChange}></lightning-combobox></div>
-                <div class="dname">Канали:</div>
-                <div class="ltnin">від <lightning-input value="2" data-active='8' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="ltnin">до <lightning-input value="4" data-active='8' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>    
-                <div class="dname">Колір:</div>
-                <div class="ltntext"> <lightning-input value="Black" data-active='8' type="text" style="width: 322px;" ></lightning-input></div>
             </fieldset>
             <div class="general">
-                <div class="dname">Ціна:</div>
+                <div class="dname">Загальна ціна:</div>
                 <div class="ltnin">від <lightning-input data-active='10' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
                 <div class="ltnin">до <lightning-input data-active='10' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>    
             </div>
-            <fieldset>
-                <legend>Корпус</legend>
-                <div class="dname">Тип:</div>
-                <div class="ltntext"> <lightning-input value="Miditower" data-active='9' type="text" style="width: 322px;" ></lightning-input></div>
-                <div class="dname">К-сть вентиляторів:</div>
-                <div class="ltnin">від <lightning-input value="1" data-active='9' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>
-                <div class="ltnin">до <lightning-input value="3" data-active='9' type="number" label=" " style="width: 100px; display:inline-block"></lightning-input></div>    
-                <div class="dname">Матеріал:</div>
-                <div class="ltntext"> <lightning-input value="Plastic" data-active='9' type="text" style="width: 322px;" ></lightning-input></div>
-            </fieldset>
+            
         </form>
         <lightning-button class="btn" label="Аналізувати" onclick={checkQuery}></lightning-button>
         <template if:true = {show}>
@@ -170,6 +149,9 @@
                         </div>
                         <div class="divtile" key={obj.corpusName}>
                             <lightning-tile label={obj.corpusName} href={obj.corpusResult} > </lightning-tile>
+                        </div>
+                        <div class="divtile price" key={obj.sum}>
+                            <lightning-formatted-text value={obj.sum}></lightning-formatted-text>
                         </div>
                     </div>
                 </template>

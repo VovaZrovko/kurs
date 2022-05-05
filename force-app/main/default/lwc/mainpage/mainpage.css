@@ -25,6 +25,8 @@ legend  {
  .general {
     margin-left: 2px;
     margin-right: 2px;
+    position: relative;
+    top:-42px;
     padding-top: 0.35em;
     padding-bottom: 0.625em;
     padding-left: 0.75em;
@@ -65,4 +67,8 @@ legend  {
 .divtile {
     display: inline-block;
     margin-left: 10px;
+}
+.price {
+    top: -4px;
+    position: relative;
 }
